@@ -10,6 +10,7 @@ body{
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 130px 1fr ;
+
 }
 
 
@@ -65,6 +66,10 @@ body{
     gap: 10px;
     padding: 10px  20px 10px 10px;    
 }
+
+
+
+
 .sidebar {
     background-color: aquamarine;
     grid-row: 1/3;
@@ -76,9 +81,16 @@ body{
 }
 
 .sidebar > .branding {
-    background-color: grey;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 4fr;  
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.branding > img {
+    height: 50px;
+    width: 50px;
 }
 
 .sidebar > .navigation {
@@ -178,7 +190,16 @@ body{
 }
 
 .announcements > .card {
-    background-color: pink;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+hr.divider {
+    border: none;
+    border-top: 1px solid #808080;
+    border-radius: 5px;
+    height: 1px;
+
 }
 
 .trending {
@@ -191,6 +212,19 @@ body{
     gap: 10px;
 }
 
+.trending > .card {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.trending > .card > img {
+    grid-row: 1/4;
+    grid-column: 1/2;
+    height: 40px;
+    width: 40px;
+}
+
 .trending > .title {
     background-color: grey;
 }
@@ -201,10 +235,18 @@ body{
 
 
 
-/* assets */
-
 img {
     height: 15px;
     width: 15px;
 }
 
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 500;
+    padding: 10px;
+}
